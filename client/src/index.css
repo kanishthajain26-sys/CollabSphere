@@ -1,0 +1,348 @@
+
+/* Authentication pages */
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f4f6fb;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+}
+
+.auth-card h1 {
+  margin: 0;
+  color: #172033;
+}
+
+.auth-card > p {
+  margin: 0 0 12px;
+  color: #687386;
+}
+
+.auth-card label,
+.note-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.auth-card input,
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8deea;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+.auth-card input:focus,
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #6366f1;
+}
+
+.auth-card button,
+.note-form-actions button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 9px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-card button:disabled,
+.note-form-actions button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.auth-error,
+.notes-error {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.auth-switch {
+  margin-top: 8px !important;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* Notes page */
+.notes-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.notes-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.notes-heading h1 {
+  margin: 0 0 8px;
+  color: #172033;
+}
+
+.notes-heading p {
+  margin: 0;
+  color: #687386;
+}
+
+.notes-count {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4338ca;
+  white-space: nowrap;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.note-form h2 {
+  margin: 0 0 8px;
+}
+
+.note-form textarea {
+  resize: vertical;
+}
+
+.note-form-actions,
+.note-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.note-form-actions .note-cancel-button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.note-card,
+.notes-empty {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.note-card h3 {
+  margin: 0 0 10px;
+}
+
+.note-card p,
+.notes-empty p {
+  color: #687386;
+  white-space: pre-wrap;
+}
+
+.note-card small {
+  color: #8b95a7;
+}
+
+.note-card-actions button {
+  padding: 8px 12px;
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.note-card-actions .note-delete-button {
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 24px;
+  }
+
+  .notes-page {
+    padding: 16px;
+  }
+
+  .notes-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .note-form {
+    padding: 16px;
+  }
+}
+
+/* CollabSphere - Create / Edit Task Form */
+.new-project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 560px;
+  box-sizing: border-box;
+  margin: 24px 0 !important;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.07);
+}
+
+.new-project-form strong {
+  margin-bottom: 6px;
+  color: #172033;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.new-project-form input,
+.new-project-form textarea,
+.new-project-form select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8deea;
+  border-radius: 10px;
+  background: #f9fafc;
+  color: #172033;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.new-project-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.new-project-form input:focus,
+.new-project-form textarea:focus,
+.new-project-form select:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.13);
+}
+
+.new-project-form label {
+  margin-bottom: -8px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.new-project-form .primary-button {
+  min-height: 46px;
+  margin-top: 6px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.new-project-form .primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.22);
+}
+
+.new-project-form .primary-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.new-project-form .icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.new-project-form .icon-button:hover {
+  background: #e5e7eb;
+}
+
+@media (max-width: 600px) {
+  .new-project-form {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .new-project-form strong {
+    font-size: 20px;
+  }
+}
