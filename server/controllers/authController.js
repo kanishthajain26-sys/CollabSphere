@@ -3,7 +3,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// ==================== SIGNUP ====================
+
 async function signup(req, res) {
   try {
     const { name, email, password } = req.body;
@@ -70,7 +70,7 @@ const token = jwt.sign(
   }
 }
 
-// ==================== LOGIN ====================
+
 async function login(req, res) {
   try {
     const { email, password } = req.body;
@@ -130,7 +130,7 @@ async function login(req, res) {
   }
 }
 
-// ==================== GET PROFILE ====================
+
 async function getProfile(req, res) {
   try {
     // Get the logged-in user's ID from the verified JWT

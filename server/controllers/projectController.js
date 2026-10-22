@@ -1,7 +1,7 @@
 
 const Project = require("../models/Project");
 
-// Create a project
+
 async function createProject(req, res) {
   try {
     const { name, category, color, progress, due } = req.body;
@@ -36,7 +36,7 @@ async function createProject(req, res) {
   }
 }
 
-// Get projects belonging to the logged-in user
+
 async function getProjects(req, res) {
   try {
     const userId = req.user.id;
@@ -58,7 +58,7 @@ async function getProjects(req, res) {
   }
 }
 
-// Update a project
+
 async function updateProject(req, res) {
   try {
     const { name, category, color, progress, due } = req.body;
@@ -105,7 +105,6 @@ async function updateProject(req, res) {
   }
 }
 
-// Delete a project
 async function deleteProject(req, res) {
   try {
     const project = await Project.findOneAndDelete({

@@ -10,18 +10,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Basic route
+
 app.get("/", (req, res) => {
   res.send("CollabSphere backend is running!");
 });
 
-// API routes
+
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/notes", require("./routes/NotesRoutes"));
 app.use("/api/projects", require("./routes/projectRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
-// Start server after database connection
 const PORT = process.env.PORT || 5000;
 
 async function startServer() {

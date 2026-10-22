@@ -126,7 +126,7 @@ function Dashboard() {
   };
   
 
-  // Load user profile and projects.
+  
   useEffect(() => {
     if (!token) {
       navigate("/login", { replace: true });
@@ -182,7 +182,7 @@ function Dashboard() {
     };
   }, [token, navigate, request]);
 
-  // Load tasks for the selected project.
+  
   useEffect(() => {
     if (!selectedProjectId || !token) {
       setTasks([]);
@@ -215,7 +215,7 @@ function Dashboard() {
     };
   }, [selectedProjectId, token, request]);
 
-  // Load team members, if the existing backend endpoint supports it.
+
   useEffect(() => {
     let cancelled = false;
 

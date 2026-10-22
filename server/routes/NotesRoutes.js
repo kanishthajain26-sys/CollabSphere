@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.use(authMiddleware);
 
-// Get logged-in user's notes
 router.get("/", async (req, res) => {
   try {
     const notes = await Note.find({ user: req.user.id })
@@ -18,7 +17,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Create a note
 router.post("/", async (req, res) => {
   try {
     const title = req.body.title?.trim();
@@ -39,7 +37,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Update a note
+
 router.put("/:id", async (req, res) => {
   try {
     const title = req.body.title?.trim();
@@ -64,7 +62,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// Delete a note
+
 router.delete("/:id", async (req, res) => {
   try {
     const note = await Note.findOneAndDelete({

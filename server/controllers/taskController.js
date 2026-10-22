@@ -3,7 +3,7 @@ const Task = require("../models/Task");
 const Project = require("../models/Project");
 const User = require("../models/User");
 
-// Create a new task
+
 const createTask = async (req, res) => {
   try {
     const {
@@ -98,7 +98,6 @@ const task = await Task.create({
   }
 };
 
-// Get tasks for a project
 const getTasks = async (req, res) => {
   try {
     const { projectId } = req.params;
@@ -139,7 +138,7 @@ const getTasks = async (req, res) => {
   }
 };
 
-// Update a task
+
 const updateTask = async (req, res) => {
   try {
     const userId = req.user?.id || req.user?._id || req.user?.userId;
@@ -238,7 +237,7 @@ const updateTask = async (req, res) => {
   }
 };
 
-// Delete a task
+
 const deleteTask = async (req, res) => {
   try {
     const userId = req.user?.id || req.user?._id || req.user?.userId;
@@ -275,7 +274,7 @@ const deleteTask = async (req, res) => {
     });
   }
 };
-// Get team members
+
 const getUsers = async (req, res) => {
     console.log("GET USERS FUNCTION CALLED");
   try {

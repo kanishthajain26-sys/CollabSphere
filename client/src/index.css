@@ -1,5 +1,5 @@
 
-/* Authentication pages */
+
 .auth-page {
   min-height: 100vh;
   display: grid;
@@ -95,7 +95,7 @@
   font-weight: 600;
 }
 
-/* Notes page */
+
 .notes-page {
   width: 100%;
   max-width: 1100px;
@@ -230,7 +230,7 @@
   }
 }
 
-/* CollabSphere - Create / Edit Task Form */
+
 .new-project-form {
   display: flex;
   flex-direction: column;
