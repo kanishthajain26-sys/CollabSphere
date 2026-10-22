@@ -34,8 +34,21 @@ async function signup(req, res) {
       password: hashedPassword,
     });
 
+    if (!process.env.JWT_SECRET) {
+  return res.status(500).json({
+    message: "Server authentication configuration error",
+  });
+}
+
+const token = jwt.sign(
+  { userId: user._id.toString() },
+  process.env.JWT_SECRET,
+  { expiresIn: "1d" }
+);
+
     return res.status(201).json({
       message: "Signup successful",
+      token,
       user: {
         id: user._id,
         name: user.name,
