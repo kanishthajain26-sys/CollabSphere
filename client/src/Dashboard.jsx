@@ -27,7 +27,7 @@ import {
 import Notes from "./pages/Notes";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://collabsphere-82ia.onrender.com/api";
 
 const navigation = [
   { label: "Projects", icon: FolderKanban },
